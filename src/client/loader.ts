@@ -76,7 +76,9 @@ export function init(
 
   x.setAttribute('data-resources-url', resourcesUrl);
   x.setAttribute('data-namespace', fsNamespace);
-  doc.head.appendChild(x);
+
+  scriptElm.parentElement.insertBefore(x, scriptElm.nextSibling);
+  // doc.head.appendChild(x);
 }
 
 
